@@ -48,7 +48,7 @@ namespace bookStore.Controllers {
 
         //     return _bookRepository.GetBookById(id);
         // }
-I
+
         
         // public ViewResult GetBook(int id, string nameOfBook) {
 
@@ -63,13 +63,20 @@ I
         //     return View(data);
         // }
 
-        [Route("book-details/{id:int:min(1)}", Name="bookdetailsroute")]
+        [Route("book-details/{id:int:min(1)}", Name="bookDetailsroute")]
         public async Task<ViewResult> GetBook(int id)
         {
             var data = await _bookRepository.GetBookById(id);
             return View(data);
         }
 
+        // [Route("book-details/{id:int:min(1)}", Name = "bookDetailsRoute")]
+        // public async Task<ViewResult> GetBook(int id)
+        // {
+        //     var data = await _bookRepository.GetBookById(id);
+
+        //     return View(data);
+        // }
 
         // https://localhost:7081/book/searchbooks?bookName=xcx&authorName=sdfjsN 
         // public List<BookModel> SearchBook(string bookName, string authorName) {

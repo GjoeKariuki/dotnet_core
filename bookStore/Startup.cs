@@ -10,6 +10,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.FileProviders;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using Microsoft.AspNetCore.Identity;
 using bookStore.Data;
 using bookStore.Repository;
 
@@ -30,7 +31,9 @@ namespace bookStore {
             services.AddEntityFrameworkNpgsql().AddDbContext<BookStoreContext>().BuildServiceProvider();
 
             // services.AddDbContext<BookStoreContext>(options => options.UseSqlServer(_configuration.GetConnectionString("DefaultString")));
-            
+            // identity settings configuration
+            services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<BookStoreContext>();
+
             services.AddControllersWithViews();
 
             // runtime compilation
@@ -74,6 +77,9 @@ namespace bookStore {
             // });
 
             app.UseRouting();
+
+            // authentication
+            app.UseAuthentication();
             
             app.UseEndpoints(endpoints => {
 

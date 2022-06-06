@@ -8,61 +8,61 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = bookStore
 build_property.RootNamespace = bookStore
-build_property.ProjectDir = g:\progressus\dev_officina\corenet\dotnet_core\bookStore\
+build_property.ProjectDir = G:\progressus\dev_officina\corenet\dotnet_core\bookStore\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = true
-build_property.MSBuildProjectDirectory = g:\progressus\dev_officina\corenet\dotnet_core\bookStore
+build_property.MSBuildProjectDirectory = G:\progressus\dev_officina\corenet\dotnet_core\bookStore
 build_property._RazorSourceGeneratorDebug = 
 
-[g:/progressus/dev_officina/corenet/dotnet_core/bookStore/Views/Book/AddNewBook.cshtml]
+[G:/progressus/dev_officina/corenet/dotnet_core/bookStore/Views/Book/AddNewBook.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va1xBZGROZXdCb29rLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[g:/progressus/dev_officina/corenet/dotnet_core/bookStore/Views/Book/GetAllBooks.cshtml]
+[G:/progressus/dev_officina/corenet/dotnet_core/bookStore/Views/Book/GetAllBooks.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va1xHZXRBbGxCb29rcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[g:/progressus/dev_officina/corenet/dotnet_core/bookStore/Views/Book/GetBook.cshtml]
+[G:/progressus/dev_officina/corenet/dotnet_core/bookStore/Views/Book/GetBook.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va1xHZXRCb29rLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[g:/progressus/dev_officina/corenet/dotnet_core/bookStore/Views/Home/AboutUs.cshtml]
+[G:/progressus/dev_officina/corenet/dotnet_core/bookStore/Views/Home/AboutUs.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dFVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[g:/progressus/dev_officina/corenet/dotnet_core/bookStore/Views/Home/ContactUs.cshtml]
+[G:/progressus/dev_officina/corenet/dotnet_core/bookStore/Views/Home/ContactUs.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb250YWN0VXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[g:/progressus/dev_officina/corenet/dotnet_core/bookStore/Views/Home/Index.cshtml]
+[G:/progressus/dev_officina/corenet/dotnet_core/bookStore/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[g:/progressus/dev_officina/corenet/dotnet_core/bookStore/Views/Shared/Components/TopBook/Default.cshtml]
+[G:/progressus/dev_officina/corenet/dotnet_core/bookStore/Views/Shared/Components/TopBook/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcVG9wQm9va1xEZWZhdWx0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[g:/progressus/dev_officina/corenet/dotnet_core/bookStore/Views/Shared/_Bookthumbnail.cshtml]
+[G:/progressus/dev_officina/corenet/dotnet_core/bookStore/Views/Shared/_Bookthumbnail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Cb29rdGh1bWJuYWlsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[g:/progressus/dev_officina/corenet/dotnet_core/bookStore/Views/Shared/_Footer.cshtml]
+[G:/progressus/dev_officina/corenet/dotnet_core/bookStore/Views/Shared/_Footer.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Gb290ZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[g:/progressus/dev_officina/corenet/dotnet_core/bookStore/Views/Shared/_Header.cshtml]
+[G:/progressus/dev_officina/corenet/dotnet_core/bookStore/Views/Shared/_Header.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9IZWFkZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[g:/progressus/dev_officina/corenet/dotnet_core/bookStore/Views/Shared/_Layout.cshtml]
+[G:/progressus/dev_officina/corenet/dotnet_core/bookStore/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[g:/progressus/dev_officina/corenet/dotnet_core/bookStore/Views/_ViewImports.cshtml]
+[G:/progressus/dev_officina/corenet/dotnet_core/bookStore/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[g:/progressus/dev_officina/corenet/dotnet_core/bookStore/Views/_ViewStart.cshtml]
+[G:/progressus/dev_officina/corenet/dotnet_core/bookStore/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

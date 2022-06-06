@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "G:\\progressus\\dev_officina\\corenet\\bookStore\\bookStore.csproj": {}
+    "G:\\progressus\\dev_officina\\corenet\\dotnet_core\\bookStore\\bookStore.csproj": {}
   },
   "projects": {
-    "G:\\progressus\\dev_officina\\corenet\\bookStore\\bookStore.csproj": {
+    "G:\\progressus\\dev_officina\\corenet\\dotnet_core\\bookStore\\bookStore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\progressus\\dev_officina\\corenet\\bookStore\\bookStore.csproj",
+        "projectUniqueName": "G:\\progressus\\dev_officina\\corenet\\dotnet_core\\bookStore\\bookStore.csproj",
         "projectName": "bookStore",
-        "projectPath": "G:\\progressus\\dev_officina\\corenet\\bookStore\\bookStore.csproj",
+        "projectPath": "G:\\progressus\\dev_officina\\corenet\\dotnet_core\\bookStore\\bookStore.csproj",
         "packagesPath": "C:\\Users\\8570w\\.nuget\\packages\\",
-        "outputPath": "G:\\progressus\\dev_officina\\corenet\\bookStore\\obj\\",
+        "outputPath": "G:\\progressus\\dev_officina\\corenet\\dotnet_core\\bookStore\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\8570w\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -38,6 +38,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.5, )"
+            },
             "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
               "target": "Package",
               "version": "[6.0.4, )"
