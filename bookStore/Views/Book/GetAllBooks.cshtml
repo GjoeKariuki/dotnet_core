@@ -1,0 +1,24 @@
+
+    @* @model IEnumerable<bookStore.Models.BookModel> *@
+
+@{
+    ViewData["Title"] = "AllBooks";
+}
+
+@model IEnumerable<BookModel>
+
+        
+       
+        <div class="container">
+             <h3 class="display-4">All books listed</h3>
+            <div class="row">
+
+                @foreach (var book in Model)
+                {
+                    <partial name="_Bookthumbnail" model="@book"/>
+                    
+                }
+            
+            </div>
+        </div> 
+   

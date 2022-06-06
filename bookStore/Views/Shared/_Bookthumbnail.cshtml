@@ -1,0 +1,44 @@
+@model BookModel
+
+<div class="col-md-4">
+    <div class="card mb-4 shadow-sm">
+    <img src="@Model.CoverImageUrl" class="img-thumbnail" alt="">
+    <svg height="5px" width="100%" xmlns="http://www.w3.org/2000/svg">
+        <img src="~/images/rur.png" width="100" height="100"/>
+    </svg>             
+    <div class="card-body">
+        <h3 class="card-title">@(string.IsNullOrEmpty(Model.Title) ? "NA" : Model.Title)</h3>
+        <p class="card-text">@(string.IsNullOrEmpty(Model.Description) ? "NA" : Model.Description)</p>
+        <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group">
+                @* href="/book/getbook/@book.Id"  *@
+                <a asp-route="bookdetailsroute" asp-route-id="@Model.Id" 
+                class="btn btn-sm btn-outline-secondary">view_details</a>
+                @* asp-fragment="similarbooks" asp-route-nameOfBook="@Model.Title"     *@
+            </div>
+            <p class="text-muted">@(string.IsNullOrEmpty(Model.Author) ? "NA" : Model.Author)</p>
+        </div>
+    </div>
+
+    </div>
+</div>
+
+
+
+
+@* <div class="col-md-4">
+    <div class="card mb-4 shadow-sm">
+        <svg height="5px" width="100%" xmlns="http://www.w3.org/2000/svg">
+            <img src="~/images/rur.png" width="100" height="100"/>
+        </svg>             
+        <div class="card-body">
+            <p class="card-text">short description</p>
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                    <a href="#" class="btn btn-sm btn-outline-secondary">view_details</a>
+                </div>
+                <small class="text-muted">author(s) name</small>
+            </div>
+        </div>
+    </div>
+</div>         *@

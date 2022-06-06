@@ -1,0 +1,81 @@
+@* @{
+    Layout = "_Layout";
+} *@
+
+@* @{
+    dynamic data = ViewBag.Data;
+    @data.Id @data.Name<br />
+            id = @ViewBag.Type.Id
+            name = @ViewBag.Type.Author
+             @ViewBag.Title
+} *@
+
+@* @{
+    var bookInfo = ViewData["book"] as BookModel;
+} *@
+@* @{
+    ViewData["Title"] = "Home";
+} *@
+@inject bookStore.Repository.IBookRepository _bookRepository
+
+
+
+<section class="jumbotron text-center">
+    <div class="container">
+        @* <environment names="Development">
+            <h3>dev</h3>
+        </environment>
+        <environment names="Production, Staging">
+            <h3>prod</h3>
+        </environment> *@
+        <h1>@ViewData["prop1"]werokamu to bookshtore:@ViewData["CustomProp"]</h1>
+        @* <h1>Id - @bookInfo.Id</h1> 
+        <h1>Author - @bookInfo.Author</h1> *@
+        <p class="lead text-muted">
+            
+            blsdnsfnifbsvdfivsidvnilsvndilhsdhfuhsblsdnsfnifbsvdfivsidvnilsvndilhsdhfuhsblsdnsfnifbsvdfivsidvnilsvndilhsdhfuhs
+        </p>
+        <p><a href="#" class="btn btn-primary my-2">Search Books</a></p>
+        @foreach(var item in await _bookRepository.GetAllBooks()){
+            <h2>@item.Title</h2>
+        }
+    </div>
+</section>
+
+<div class="py-5 bg-light">
+    <div class="container">
+        @* <h3 class="h3">Top books</h3> *@
+        <big>Top BOOKs</big>
+        <p big>Top books using attribute</p>
+        @await Component.InvokeAsync("TopBook", new {count=5})
+        @* <vc:top-book count="3"></vc:top-book> *@
+        
+    </div>
+</div>
+@* @section scripts{
+    <script>
+    $(document).ready(function () {
+        alert("werwe punguza");
+    })
+</script>
+} *@
+
+     
+        @* @for (int i = 0; i < 10; i++)
+        {
+            <h1>welcome to bookstore with index @i</h1>
+        <p>this is the bookstore homepage</p>
+        } *@
+        @* <input type="button" value="click_me" class="btn btn-danger"/> *@
+        @* <img src="~/MyStaticFolder/staticfile" alt="fe" /> *@
+
+        @* @if(true) {
+
+        }
+        else if(false){
+
+        }
+        else {
+
+        } *@  
+   

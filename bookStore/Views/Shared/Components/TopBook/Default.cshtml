@@ -1,0 +1,10 @@
+@model IEnumerable<BookModel>
+
+<div class="row">
+    @foreach(var book in Model){
+        <partial name="_Bookthumbnail" model="book" />
+    }
+    
+    @* @Html.Partial("_Bookthumbnail", new BookModel()) *@
+            
+</div>
