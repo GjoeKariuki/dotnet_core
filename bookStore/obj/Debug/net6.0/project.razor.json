@@ -16475,6 +16475,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "g:\\progressus\\dev_officina\\corenet\\dotnet_core\\bookStore\\Views\\Account\\ResetPassword.cshtml",
+      "TargetPath": "Views\\Account\\ResetPassword.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "g:\\progressus\\dev_officina\\corenet\\dotnet_core\\bookStore\\Views\\Home\\ContactUs.cshtml",
       "TargetPath": "Views\\Home\\ContactUs.cshtml",
       "FileKind": "mvc"

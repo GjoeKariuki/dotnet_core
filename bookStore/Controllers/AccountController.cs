@@ -82,8 +82,14 @@ namespace bookStore.Controllers
                 if(result.IsNotAllowed){
                     ModelState.AddModelError("", "not allowed");
                 }
+                else if(result.IsLockedOut){
+                    ModelState.AddModelError("", "account blocked.try later!!");
+                }
+                else{
+                    ModelState.AddModelError("", "Invalid credentials");
 
-                ModelState.AddModelError("", "Invalid credentials");
+                }
+
             }
             return View(signinModel);
         }
@@ -178,6 +184,41 @@ namespace bookStore.Controllers
                 }
                 ModelState.Clear();
                 model.EmailSent = true;
+            }
+            return View(model);
+        }
+
+        [AllowAnonymous, HttpGet("reset-password")]
+        public IActionResult ResetPassword(string uid, string token)
+        {
+            ResetPassword resetPassword = new ResetPassword
+            {
+                Token = token,
+                UserId = uid
+            };
+            return View(resetPassword);
+        }
+
+
+        [HttpPost("reset-password")]
+        public async Task<IActionResult> ResetPassword(ResetPassword model)
+        {
+            if (ModelState.IsValid)
+            {  
+                model.Token = model.Token.Replace(" ", "+");
+                var result = await _accountRepository.ResetPassword(model);
+                if(result.Succeeded)
+                {
+                    ModelState.Clear();
+                    model.IsSuccess = true;
+                    return View(model);
+                }
+                
+                foreach(var error in result.Errors)
+                {
+                    ModelState.AddModelError("",error.Description);
+                }
+                
             }
             return View(model);
         }

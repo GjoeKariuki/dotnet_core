@@ -78,7 +78,7 @@ namespace bookStore.Repository
             // cookies
             var rememberme = signinModel.RememberMe;
             // lockout when password trials ends
-            var lockout = false;
+            var lockout = true;
             return await _signInManager.PasswordSignInAsync(email,password,rememberme,lockout);
         }
 
@@ -146,5 +146,16 @@ namespace bookStore.Repository
             };
             await _emailService.ForgotPassword(options);
         }
+
+
+        public async Task<IdentityResult> ResetPassword(ResetPassword model)
+        {
+            var userid = await _userManager.FindByIdAsync(model.UserId);
+            var token = model.Token;
+            var newpassword = model.NewPassword;
+            return await _userManager.ResetPasswordAsync(userid, token, newpassword);
+        }
+
+
     }
 }

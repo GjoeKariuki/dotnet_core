@@ -53,7 +53,17 @@ namespace bookStore {
                 options.Password.RequireUppercase = false;
 
                 options.SignIn.RequireConfirmedEmail = true; 
+
+                // lockout user after failed attempts
+                options.Lockout.MaxFailedAccessAttempts = 3;
+                options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(10);
                 
+            });
+            // token lifespan
+
+            services.Configure<DataProtectionTokenProviderOptions>(options =>
+            {
+                options.TokenLifespan = TimeSpan.FromMinutes(60);
             });
 
             // redirection url

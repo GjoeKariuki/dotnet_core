@@ -22,6 +22,7 @@ namespace bookStore.Repository
         Task GenerateForgotPassword(ApplicationUser user);
         // Task SendForgotPassword(ApplicationUser user, string token);
         // 
+        Task<IdentityResult> ResetPassword(ResetPassword model);
 
     }
 }
