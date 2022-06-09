@@ -1,0 +1,36 @@
+@{
+    ViewBag["Title"] = "ConfirmEmail";
+}
+@model bookStore.Models.EmailConfirmModel
+
+<div class="container">
+    <div class="row text-center">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            @if(Model.EmailVerified == true){
+                <div class="alert alert-success" role="alert">
+                    <p>your email has been verified successfully.</p>
+                </div>
+            }
+            else
+            {
+                if(Model.EmailSent){
+                    <p>email sent on your account1</p>
+                }
+                else {
+                    <p>email sent on your account2 </p>
+                }
+                    <form asp-action="ConfirmEmail">
+                        <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+                        <input type="hidden" asp-for="Email">
+                        <p>did not get any email?</p>
+                        <div class="form-group">
+                            <input type="submit" value="resend email" class="btn btn-primary">
+                        </div>
+
+                    </form>
+            }
+            
+        </div>
+    </div>
+</div>

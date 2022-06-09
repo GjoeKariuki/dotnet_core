@@ -84,6 +84,8 @@ namespace bookStore.Controllers {
         //     return _bookRepository.SearchBook(bookName, authorName);
         // }
 
+
+        [Authorize]
         public async Task<ViewResult> AddNewBook(bool isSuccess = false, int bookId =0 ) {
 
             // dynamic selection

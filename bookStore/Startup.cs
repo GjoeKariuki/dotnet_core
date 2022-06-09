@@ -13,6 +13,13 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.AspNetCore.Identity;
 using bookStore.Data;
 using bookStore.Repository;
+using bookStore.Models;
+using bookStore.Helpers;
+using bookStore.Service;
+
+
+
+
 
 namespace bookStore {
 
@@ -32,7 +39,32 @@ namespace bookStore {
 
             // services.AddDbContext<BookStoreContext>(options => options.UseSqlServer(_configuration.GetConnectionString("DefaultString")));
             // identity settings configuration
-            services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<BookStoreContext>();
+            //services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<BookStoreContext>();
+            services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<BookStoreContext>().AddDefaultTokenProviders();
+
+            // password complexity configuration
+            services.Configure<IdentityOptions>(options =>
+            {
+                options.Password.RequiredLength = 10;
+                options.Password.RequiredUniqueChars = 2;
+                options.Password.RequireDigit = false;
+                options.Password.RequireLowercase = false;
+                options.Password.RequireNonAlphanumeric = false;
+                options.Password.RequireUppercase = false;
+
+                options.SignIn.RequireConfirmedEmail = true; 
+                
+            });
+
+            // redirection url
+            // services.ConfigureApplicationCookie(config => 
+            // {
+            //     config.LoginPath = _configuration["Application:LoginPath"];
+            // });
+            services.ConfigureApplicationCookie(config => 
+            {
+                config.LoginPath = "/signin";
+            });
 
             services.AddControllersWithViews();
 
@@ -53,7 +85,14 @@ namespace bookStore {
             services.AddScoped<IBookRepository, BookRepository>();
             services.AddScoped<ILanguageRepository, LanguageRepository>();
 
-        
+            services.AddScoped<IAccountRepository, AccountRepository>();
+
+            services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IEmailService, EmailService>();
+            
+            services.AddScoped<IUserClaimsPrincipalFactory<ApplicationUser>, UserClaims>();
+
+            services.Configure<SMTPConfigModel>(_configuration.GetSection("SMTPConfig"));
 
         }
 
@@ -80,6 +119,9 @@ namespace bookStore {
 
             // authentication
             app.UseAuthentication();
+
+            // authorization
+            app.UseAuthorization();
             
             app.UseEndpoints(endpoints => {
 
